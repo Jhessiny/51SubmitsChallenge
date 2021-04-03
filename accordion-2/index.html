@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
+    <title>Accordion</title>
+  </head>
+  <body>
+    <nav class="menu">
+      <div class="menu__item">
+        <a class="menu__link"><i class="lni lni-user"></i>Profile</a>
+      </div>
+      <div class="menu__item">
+        <a class="menu__link"><i class="lni lni-bubble"></i>Messages</a>
+      </div>
+      <div class="menu__item">
+        <div class="menu__accordion">
+          <a class="menu__link menu__accordion-label"
+            ><i class="lni lni-cogs"></i>Settings</a
+          >
+          <ul class="menu__accordion-list">
+            <li class="menu__accordion-item">Profile</li>
+            <li class="menu__accordion-item">Password</li>
+            <li class="menu__accordion-item">Notifications</li>
+            <li class="menu__accordion-item">Billing</li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu__item">
+        <a class="menu__link"><i class="lni lni-key"></i>Logout</a>
+      </div>
+    </nav>
+
+    <script>
+      const accordionItem = [
+        ...document.getElementsByClassName("menu__accordion-label"),
+      ];
+
+      accordionItem.forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("menu__accordion-label--active");
+        });
+      });
+    </script>
+  </body>
+</html>
