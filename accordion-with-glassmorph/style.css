@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(img/bg.jpg);
+  font-size: 1.6rem;
+}
+
+.section-accordion {
+  padding: 8rem 0;
+
+  min-height: 100vh;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.heading-secondary {
+  color: rgb(230, 178, 141);
+  text-transform: uppercase;
+  font-size: 7rem;
+  font-weight: 300;
+  margin-bottom: 5rem;
+  text-align: right;
+  border-bottom: 3px solid #242424;
+  /* display: inline-block; */
+  float: right;
+}
+
+.accordion {
+  max-width: 80rem;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  clear: both;
+}
+
+.accordion__item {
+  position: relative;
+  margin: 2px 0;
+}
+
+.accordion__label {
+  display: block;
+  padding: 2.5rem 3.5rem 2.5rem 2rem;
+  cursor: pointer;
+  position: relative;
+  background-color: #9c9c9c77;
+  backdrop-filter: blur(7px);
+  font-weight: 500;
+}
+
+.accordion__label span {
+  margin-right: 1rem;
+}
+
+.accordion__label::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: orangered;
+  font-weight: 700;
+}
+
+.accordion__content {
+  position: relative;
+  padding: 0 2rem 0 12rem;
+  padding-left: 100rem;
+  overflow: hidden;
+  height: 0;
+  transition: all 0.3s;
+  overflow-y: hidden;
+  opacity: 0;
+  color: #666;
+  font-size: 1.5rem;
+  background-color: #f7f7f780;
+  backdrop-filter: blur(7px);
+}
+
+.accordion__content p {
+  border-left: 3px solid rgb(139, 211, 191);
+  padding-left: 2rem;
+}
+
+.accordion__item--active .accordion__content {
+  height: 14rem;
+  padding: 2rem;
+  /* margin-left: 12rem; */
+  opacity: 1;
+}
+
+.accordion__item--active .accordion__label::after {
+  content: "-";
+}
+
+@media (max-width: 850px) {
+  html {
+    font-size: 55%;
+  }
+  .section-accordion {
+    padding: 8rem 1rem;
+    width: 100vw;
+  }
+
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
+
+  .accordion__item--active .accordion__content {
+    margin-left: 0rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .accordion__item--active .accordion__content {
+    height: 19rem;
+  }
+}
