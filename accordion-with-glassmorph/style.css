@@ -33,7 +33,7 @@ body {
   margin-bottom: 6rem;
   text-align: right;
   border-bottom: 3px solid #ff215a;
-  /* display: inline-block; */
+
   float: right;
 }
 
@@ -79,13 +79,13 @@ body {
 .accordion__content {
   position: relative;
   padding: 0 2rem 0 2rem;
-  /* padding-left: 100rem; */
+
   overflow: hidden;
   height: 0;
   transition: all 0.3s;
   overflow: hidden;
   opacity: 0;
-  /* color: #666; */
+
   font-size: 1.5rem;
   background-color: #f7f7f780;
   background-color: #9c9c9c4b;
@@ -100,7 +100,7 @@ body {
 .accordion__item--active .accordion__content {
   height: 14rem;
   padding: 2rem;
-  /* margin-left: 12rem; */
+
   opacity: 1;
 }
 
