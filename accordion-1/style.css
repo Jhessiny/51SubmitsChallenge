@@ -76,14 +76,19 @@ body {
 
 .accordion__content {
   position: relative;
-  padding: 0 2rem 0 12rem;
-  padding-left: 100rem;
   overflow: hidden;
   height: 0;
+
+  padding: 0 2rem 0 2rem;
+  margin-left: 12rem;
+
+  transform: translateX(10rem);
+
   transition: all 0.3s;
-  overflow-y: hidden;
+  overflow: hidden;
   opacity: 0;
   color: #666;
+
   font-size: 1.5rem;
 }
 
@@ -97,6 +102,7 @@ body {
   padding: 2rem;
   margin-left: 12rem;
   opacity: 1;
+  transform: translateX(0);
 }
 
 .accordion__item--active .accordion__label::after {
